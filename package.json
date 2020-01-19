@@ -1,6 +1,6 @@
 {
   "version": "0.0.5",
-  "description": "CSS tools",
+  "description": "CSS tools that built to simplify CSS-in-JS styling",
   "license": "MIT",
   "private": false,
   "name": "eo-css-tools",

@@ -1,12 +1,16 @@
 # eo-css-tools
 
-Simple data comparsion and composition library
+✨ CSS tools that built to simplify CSS-in-JS styling.
 
 [![build status](https://badgen.net/travis/ibitcy/eo-css-tools?icon=travis)](https://travis-ci.org/ibitcy/eo-css-tools)
 [![npm bundlephobia minzip](https://badgen.net/bundlephobia/minzip/eo-css-tools@latest?icon=awesome)
 ![npm version](https://badgen.net/npm/v/eo-css-tools?icon=npm&color=blue)](https://www.npmjs.com/package/eo-css-tools)
 
-# Install
+## Utils
+
+- [breakpoint](#breakpoint)
+
+## Install
 
 ```bash
 # npm
@@ -16,9 +20,19 @@ npm i css-tools
 yarn add css-tools
 ```
 
+# Compatibility
+
+💅 [Styled Components](https://styled-components.com)  
+👩‍🎤 [Emotion](https://emotion.sh)  
+✨ [Linaria](https://linaria.now.sh)
+
+[Tested](https://1eq9w.sse.codesandbox.io) only with the libraries above. However, it must be compatible with any CSS-in-JS library.
+
 # Usage
 
-#### Example
+## breakpoint
+
+### Example
 
 ```typescript
 import { css } from 'YOUR_BELOWED_CSS_IN_JS_FRAMEWORK';
@@ -41,7 +55,7 @@ const style = {
 };
 ```
 
-#### Result
+### Result
 
 ```css
 .root_xk292ls {
