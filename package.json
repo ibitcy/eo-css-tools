@@ -1,11 +1,11 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CSS tools",
   "license": "MIT",
   "private": false,
-  "name": "css-tools",
+  "name": "eo-css-tools",
   "sideEffects": false,
-  "repository": "https://github.com/ibitcy/css-tools.git",
+  "repository": "https://github.com/ibitcy/eo-css-tools.git",
   "keywords": [
     "array",
     "data",
