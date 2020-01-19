@@ -1,6 +1,8 @@
+declare type IValue = number | string | undefined;
+declare type ICssString = (cssTemplateString: TemplateStringsArray) => string;
 interface IBreakpointParams {
-    min?: number | string;
-    max?: number | string;
+    min?: IValue;
+    max?: IValue;
 }
-export declare const breakpoint: (params: IBreakpointParams) => (cssTemplateString: TemplateStringsArray) => string;
+export declare function breakpoint(params: IBreakpointParams | IValue[]): ICssString;
 export {};

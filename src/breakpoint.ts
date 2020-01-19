@@ -1,12 +1,23 @@
 import { mormalizePixelValue } from './normalizeValue';
 
+type IValue = number | string | undefined;
+type ICssString = (cssTemplateString: TemplateStringsArray) => string;
+
 interface IBreakpointParams {
-  min?: number | string;
-  max?: number | string;
+  min?: IValue;
+  max?: IValue;
 }
 
-export const breakpoint = (params: IBreakpointParams): ((cssTemplateString: TemplateStringsArray) => string) => {
-  const { min, max } = params;
+export function breakpoint(params: IBreakpointParams | IValue[]): ICssString {
+  let min: IValue = undefined;
+  let max: IValue = undefined;
+
+  if (Array.isArray(params)) {
+    [min, max] = params;
+  } else {
+    min = params.min;
+    max = params.max;
+  }
 
   return css => {
     switch (true) {
@@ -32,4 +43,4 @@ export const breakpoint = (params: IBreakpointParams): ((cssTemplateString: Temp
       }
     }
   };
-};
+}

@@ -69,4 +69,11 @@ describe('breakpoint', () => {
     );
     done();
   });
+
+  it('check min & max with integer as array', done => {
+    expect(breakpoint(MOBILE_INT)`background-color: red;`).toEqual(
+      `@media only screen and (min-width: ${MOBILE_STR[0]}) and (max-width: ${MOBILE_STR[1]}) {background-color: red;}`,
+    );
+    done();
+  });
 });
