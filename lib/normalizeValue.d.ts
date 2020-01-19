@@ -1,1 +1,1 @@
-export declare const mormalizeValue: (value: string | number | undefined) => string | undefined;
+export declare const mormalizePixelValue: (value: string | number | undefined) => string | undefined;

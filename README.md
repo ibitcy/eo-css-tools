@@ -21,44 +21,42 @@ yarn add css-tools
 #### Example
 
 ```typescript
-const style = css`
-  height: 400px;
+import { css } from 'YOUR_BELOWED_CSS_IN_JS_FRAMEWORK';
+import { breakpoint } from 'eo-css-tools';
 
-  // Mobile portrait breakpoint
-  ${breakpoint(0, 400)`
-    height: 200px;
-  `}
+const style = {
+  root: css`
+    height: 400px;
 
-  // Tablet breakpoint
-  ${breakpoint('400px', '1024px')`
-    height: 300px;
-  `}
-`;
+    // Mobile portrait breakpoint
+    ${breakpoint(0, 400)`
+      height: 200px;
+    `}
+
+    // Tablet breakpoint
+    ${breakpoint('400px', '1024px')`
+      height: 300px;
+    `}
+  `,
+};
 ```
 
 #### Result
 
-```javascript
-[
-  {
-    id: '1',
-    title: 'Document 1',
-    status: 'upd', // <--- New value
-    updated: '1970-01-01T00:00:03.000Z', // <--- New value
-  },
-  {
-    id: '2',
-    title: 'Document 2',
-    status: 'old',
-    updated: '1970-01-01T00:00:02.000Z',
-  },
+```css
+.root_xk292ls {
+  height: 400px;
+}
 
-  // New record
-  {
-    id: '3',
-    title: 'Document 3',
-    status: 'new',
-    updated: '1970-01-01T00:00:04.000Z',
-  },
-];
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+  .root_xk292ls {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 1024px) {
+  .root_xk292ls {
+    height: 300px;
+  }
+}
 ```
