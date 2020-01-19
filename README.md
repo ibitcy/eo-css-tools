@@ -1,10 +1,10 @@
-# css-tools
+# eo-css-tools
 
 Simple data comparsion and composition library
 
-[![build status](https://badgen.net/travis/ibitcy/css-tools?icon=travis)](https://travis-ci.org/ibitcy/css-tools)
-[![npm bundlephobia minzip](https://badgen.net/bundlephobia/minzip/css-tools@latest?icon=awesome)
-![npm version](https://badgen.net/npm/v/css-tools?icon=npm&color=blue)](https://www.npmjs.com/package/css-tools)
+[![build status](https://badgen.net/travis/ibitcy/eo-css-tools?icon=travis)](https://travis-ci.org/ibitcy/eo-css-tools)
+[![npm bundlephobia minzip](https://badgen.net/bundlephobia/minzip/eo-css-tools@latest?icon=awesome)
+![npm version](https://badgen.net/npm/v/eo-css-tools?icon=npm&color=blue)](https://www.npmjs.com/package/eo-css-tools)
 
 # Install
 
