@@ -43,12 +43,12 @@ const style = {
     height: 400px;
 
     // Mobile portrait breakpoint
-    ${breakpoint(0, 400)`
+    ${breakpoint([0, 400])`
       height: 200px;
     `}
 
     // Tablet breakpoint
-    ${breakpoint('400px', '1024px')`
+    ${breakpoint({ min: '401px', max: '1024px' })`
       height: 300px;
     `}
   `,
