@@ -1,6 +1,6 @@
 # eo-css-tools
 
-✨ CSS tools that built to simplify CSS-in-JS styling.
+🛠 CSS tools that built to simplify CSS-in-JS styling.
 
 [![build status](https://badgen.net/travis/ibitcy/eo-css-tools?icon=travis)](https://travis-ci.org/ibitcy/eo-css-tools)
 [![npm bundlephobia minzip](https://badgen.net/bundlephobia/minzip/eo-css-tools@latest?icon=awesome)
@@ -24,7 +24,7 @@ yarn add css-tools
 
 💅 [Styled Components](https://styled-components.com)  
 👩‍🎤 [Emotion](https://emotion.sh)  
-✨ [Linaria](https://linaria.now.sh)
+🌸 [Linaria](https://linaria.now.sh)
 
 [Tested](https://1eq9w.sse.codesandbox.io) only with the libraries above. However, it must be compatible with any CSS-in-JS library.
 
