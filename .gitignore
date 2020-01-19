@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+test/test.js
+dist
+.rpt2_cache
+.history
+.idea
+.vscode
+yarn-error.log
