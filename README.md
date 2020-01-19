@@ -68,7 +68,7 @@ const style = {
   }
 }
 
-@media only screen and (min-width: 400px) and (max-width: 1024px) {
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
   .root_xk292ls {
     height: 300px;
   }
