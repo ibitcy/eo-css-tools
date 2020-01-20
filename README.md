@@ -38,6 +38,8 @@ yarn add css-tools
 import { css } from 'YOUR_BELOWED_CSS_IN_JS_FRAMEWORK';
 import { breakpoint } from 'eo-css-tools';
 
+const LARGE_TO_INFINITY = [2000, Infinity];
+
 const style = {
   root: css`
     height: 400px;
@@ -50,6 +52,11 @@ const style = {
     // Tablet breakpoint
     ${breakpoint({ min: '401px', max: '1024px' }).css`
       height: 300px;
+    `}
+
+    // Large screens
+    ${breakpoint(LARGE_TO_INFINITY).css`
+      height: 600px;
     `}
   `,
 };
