@@ -1,4 +1,4 @@
-import { mormalizePixelValue } from './normalizeValue';
+import { normalizePixelValue } from './normalizePixelValue';
 
 type IValue = number | string | undefined;
 type ICssString = (cssTemplateString: TemplateStringsArray) => string;
@@ -13,10 +13,11 @@ export function breakpoint(params: IBreakpointParams | IValue[]): { css: ICssStr
   let max: IValue = undefined;
 
   if (Array.isArray(params)) {
-    [min, max] = params;
+    min = normalizePixelValue(params[0]);
+    max = normalizePixelValue(params[1]);
   } else {
-    min = params.min;
-    max = params.max;
+    min = normalizePixelValue(params.min);
+    max = normalizePixelValue(params.max);
   }
 
   return {
@@ -26,21 +27,19 @@ export function breakpoint(params: IBreakpointParams | IValue[]): { css: ICssStr
           (Boolean(min === 0) && Boolean(max === 0)) ||
           (Boolean(min === 0) && Boolean(max)) ||
           (Boolean(max === 0) && Boolean(min)): {
-          return `@media only screen and (min-width: ${mormalizePixelValue(min)}) and (max-width: ${mormalizePixelValue(
-            max,
-          )}) {${cssString}}`;
+          return `@media only screen and (min-width: ${min}) and (max-width: ${max}) {${cssString}}`;
         }
 
         case Boolean(min || min === 0): {
-          return `@media only screen and (min-width: ${mormalizePixelValue(min)}) {${cssString}}`;
+          return `@media only screen and (min-width: ${min}) {${cssString}}`;
         }
 
         case Boolean(max || max === 0): {
-          return `@media only screen and (max-width: ${mormalizePixelValue(max)}) {${cssString}}`;
+          return `@media only screen and (max-width: ${max}) {${cssString}}`;
         }
 
         default: {
-          return '';
+          return ``;
         }
       }
     },
