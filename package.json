@@ -1,5 +1,5 @@
 {
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "CSS tools that built to simplify CSS-in-JS styling",
   "license": "MIT",
   "private": false,
@@ -44,5 +44,8 @@
     "rollup-plugin-typescript2": "^0.25.3",
     "ts-jest": "^24.2.0",
     "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "csstype": "^2.6.8"
   }
 }
