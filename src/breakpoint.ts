@@ -8,7 +8,7 @@ interface IBreakpointParams {
   max?: IValue;
 }
 
-export function breakpoint(params: IBreakpointParams | IValue[]): ICssString {
+export function breakpoint(params: IBreakpointParams | IValue[]): { css: ICssString } {
   let min: IValue = undefined;
   let max: IValue = undefined;
 
@@ -19,28 +19,30 @@ export function breakpoint(params: IBreakpointParams | IValue[]): ICssString {
     max = params.max;
   }
 
-  return css => {
-    switch (true) {
-      case Boolean(min && max) ||
-        (Boolean(min === 0) && Boolean(max === 0)) ||
-        (Boolean(min === 0) && Boolean(max)) ||
-        (Boolean(max === 0) && Boolean(min)): {
-        return `@media only screen and (min-width: ${mormalizePixelValue(min)}) and (max-width: ${mormalizePixelValue(
-          max,
-        )}) {${css}}`;
-      }
+  return {
+    css: cssString => {
+      switch (true) {
+        case Boolean(min && max) ||
+          (Boolean(min === 0) && Boolean(max === 0)) ||
+          (Boolean(min === 0) && Boolean(max)) ||
+          (Boolean(max === 0) && Boolean(min)): {
+          return `@media only screen and (min-width: ${mormalizePixelValue(min)}) and (max-width: ${mormalizePixelValue(
+            max,
+          )}) {${cssString}}`;
+        }
 
-      case Boolean(min || min === 0): {
-        return `@media only screen and (min-width: ${mormalizePixelValue(min)}) {${css}}`;
-      }
+        case Boolean(min || min === 0): {
+          return `@media only screen and (min-width: ${mormalizePixelValue(min)}) {${cssString}}`;
+        }
 
-      case Boolean(max || max === 0): {
-        return `@media only screen and (max-width: ${mormalizePixelValue(max)}) {${css}}`;
-      }
+        case Boolean(max || max === 0): {
+          return `@media only screen and (max-width: ${mormalizePixelValue(max)}) {${cssString}}`;
+        }
 
-      default: {
-        return '';
+        default: {
+          return '';
+        }
       }
-    }
+    },
   };
 }
