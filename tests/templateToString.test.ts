@@ -16,8 +16,8 @@ describe('templateToString', () => {
     const color = 'red';
     const padding = 10;
     expect(
-      templateToString`1: ${color} 2: ${color} 3: ${1}; 4: ${1 + 1}; 5: ${padding} ${padding} ${0} ${'10'}`,
-    ).toEqual(`1: red; 2: red; 3: 1px; 4: 2px; 5: 10 10 0 10`);
+      templateToString`1: ${color}; 2: ${color}; 3: ${1 + 'px'}; 4: ${1 + 1}; 5: ${padding} ${padding} ${0} ${'10'}`,
+    ).toEqual(`1: red; 2: red; 3: 1px; 4: 2; 5: 10 10 0 10`);
     done();
   });
 });
