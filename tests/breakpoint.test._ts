@@ -119,4 +119,16 @@ describe('breakpoint', () => {
     );
     done();
   });
+
+  it('Result template', done => {
+    const color = 'red';
+    const padding = '10px';
+    expect(
+      breakpoint([1, 2]).css`background-color: ${color}; color: ${color}; height: ${1}px; width: ${1 +
+        1}px; padding: ${padding} ${padding} ${0} ${'10px'}`,
+    ).toEqual(
+      `@media only screen and (min-width: 1px) and (max-width: 2px) {background-color: red; color: red; height: 1px; width: 2px; padding: 10px 10px 0 10px}`,
+    );
+    done();
+  });
 });
