@@ -20,7 +20,7 @@ npm i css-tools
 yarn add css-tools
 ```
 
-# Compatibility
+## Compatibility
 
 💅 [Styled Components](https://styled-components.com)  
 👩‍🎤 [Emotion](https://emotion.sh)  
@@ -28,9 +28,9 @@ yarn add css-tools
 
 [Tested](https://1eq9w.sse.codesandbox.io) only with the libraries above. However, it must be compatible with any CSS-in-JS library.
 
-# Usage
+## Usage
 
-## Breakpoints
+### Breakpoints
 
 Generates media query with min/max-width conditions.
 
@@ -45,7 +45,7 @@ Generates media query with min/max-width conditions.
 | `desktop()`        | Laptops and larger                      | 1200–Infinity |
 
 
-### Example
+#### Example
 
 ```typescript
 import { css } from 'YOUR_BELOWED_CSS_IN_JS_FRAMEWORK';
@@ -75,7 +75,7 @@ const style = {
 };
 ```
 
-### Result
+#### Result
 
 ```css
 .root_xk292ls {
