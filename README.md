@@ -30,33 +30,46 @@ yarn add css-tools
 
 # Usage
 
-## `breakpoint` or `brp` (alias)
+## Breakpoints
+
+Generates media query with min/max-width conditions.
+
+| Method name            | Breakpoint type                         | Media query   |
+|------------------------|-----------------------------------------|---------------|
+| `breakpoint([min, max])` | Custom                                  |               |
+| `brp([min, max])`        | Alias of breakpoint (just shorthand)    |               |
+| `mobile()`               | Mobile devices in portrait orientation  | 0–479px       |
+| `mobileLandscape()`      | Mobile devices in landscape orientation | 0–767px       |
+| `tablet()`             | Tablet devices in portrait orientation  | 0–991px       |
+| `tabletLandscape()`    | Tablet devices in landscape orientation | 0–1199px      |
+| `desktop()`        | Laptops and larger                      | 1200–Infinity |
+
 
 ### Example
 
 ```typescript
 import { css } from 'YOUR_BELOWED_CSS_IN_JS_FRAMEWORK';
-import { breakpoint, brp } from 'eo-css-tools';
+import { breakpoint, brp, mobile } from 'eo-css-tools';
 
-const LARGE_TO_INFINITY = [2000, Infinity];
+const LARGE_TO_INFINITY = ['2000px', Infinity];
 
 const style = {
   root: css`
-    height: 400px;
+    height: 200px;
 
     // Mobile portrait breakpoint
-    ${breakpoint([0, 400])} {
-      height: 200px;
-    }
-
-    // Tablet breakpoint
-    ${brp({ min: '401px', max: '1024px' })} {
-      height: 300px;
+    ${breakpoint([undefined, 400])} {
+      height: 400px;
     }
 
     // Large screens
     ${brp(LARGE_TO_INFINITY)} {
       height: 600px;
+    }
+    
+    // Large screens
+    ${mobile()} {
+      height: 800px;
     }
   `,
 };
@@ -66,18 +79,24 @@ const style = {
 
 ```css
 .root_xk292ls {
-  height: 400px;
+  height: 200px;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
   .root_xk292ls {
-    height: 200px;
+    height: 400px;
   }
 }
 
-@media only screen and (min-width: 401px) and (max-width: 1024px) {
+@media only screen and (min-width: 2000px) {
   .root_xk292ls {
-    height: 300px;
+    height: 600px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .root_xk292ls {
+    height: 800px;
   }
 }
 ```

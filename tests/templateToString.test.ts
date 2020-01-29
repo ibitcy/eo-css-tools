@@ -1,5 +1,5 @@
 import expect from 'expect';
-import { templateToString } from '../src/templateToString';
+import {templateToString} from '../src/templateToString';
 
 describe('templateToString', () => {
   it('raw', done => {

@@ -1,23 +1,10 @@
-import { normalizePixelValue } from './normalizePixelValue';
+import {normalizePixelValue} from './normalizePixelValue';
 
-type IValue = number | string | undefined;
+type TBreakpointValue = number | string | undefined;
 
-interface IBreakpointParams {
-  min?: IValue;
-  max?: IValue;
-}
-
-export function breakpoint(params: IBreakpointParams | IValue[]): string {
-  let min: IValue;
-  let max: IValue;
-
-  if (Array.isArray(params)) {
-    min = normalizePixelValue(params[0]);
-    max = normalizePixelValue(params[1]);
-  } else {
-    min = normalizePixelValue(params.min);
-    max = normalizePixelValue(params.max);
-  }
+export function breakpoint(params: TBreakpointValue[]): string {
+  const min = normalizePixelValue(params[0]);
+  const max = normalizePixelValue(params[1]);
 
   switch (true) {
     case Boolean(min && max) ||
@@ -41,4 +28,5 @@ export function breakpoint(params: IBreakpointParams | IValue[]): string {
   }
 }
 
+// Aliases
 export const brp = breakpoint;

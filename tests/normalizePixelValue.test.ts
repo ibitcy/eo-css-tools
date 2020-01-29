@@ -1,5 +1,5 @@
 import expect from 'expect';
-import { normalizePixelValue } from '../src/normalizePixelValue';
+import {normalizePixelValue} from '../src/normalizePixelValue';
 
 describe('normalizePixelValue', () => {
   it('integer', done => {
