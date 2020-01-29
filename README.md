@@ -6,9 +6,9 @@
 [![npm bundlephobia minzip](https://badgen.net/bundlephobia/minzip/eo-css-tools@latest?icon=awesome)
 ![npm version](https://badgen.net/npm/v/eo-css-tools?icon=npm&color=blue)](https://www.npmjs.com/package/eo-css-tools)
 
-## Utils
+## Tools
 
-- [breakpoint](#breakpoint)
+- [Breakpoints](#Breakpoints)
 
 ## Install
 
@@ -20,7 +20,7 @@ npm i css-tools
 yarn add css-tools
 ```
 
-# Compatibility
+## Compatibility
 
 💅 [Styled Components](https://styled-components.com)  
 👩‍🎤 [Emotion](https://emotion.sh)  
@@ -28,9 +28,9 @@ yarn add css-tools
 
 [Tested](https://1eq9w.sse.codesandbox.io) only with the libraries above. However, it must be compatible with any CSS-in-JS library.
 
-# Usage
+## Usage
 
-## Breakpoints
+### Breakpoints
 
 Generates media query with min/max-width conditions.
 
@@ -44,7 +44,7 @@ Generates media query with min/max-width conditions.
 | `desktop()`               | Laptops and larger                      | 1200–Infinity |
 
 
-### Example
+#### Example
 
 ```typescript
 import { css } from 'YOUR_BELOWED_CSS_IN_JS_FRAMEWORK';
@@ -56,17 +56,17 @@ const style = {
   root: css`
     height: 200px;
 
-    // Mobile portrait breakpoint
+    /* Mobile portrait custom */
     ${breakpoint([undefined, 400])} {
       height: 400px;
     }
 
-    // Large screens
+    /* Large screens */
     ${brk(LARGE_TO_INFINITY)} {
       height: 600px;
     }
     
-    // Large screens
+    /* Mobile portrait predefined */
     ${mobile()} {
       height: 800px;
     }
@@ -74,7 +74,7 @@ const style = {
 };
 ```
 
-### Result
+#### Result
 
 ```css
 .root_xk292ls {
