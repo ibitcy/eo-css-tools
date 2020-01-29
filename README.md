@@ -6,9 +6,9 @@
 [![npm bundlephobia minzip](https://badgen.net/bundlephobia/minzip/eo-css-tools@latest?icon=awesome)
 ![npm version](https://badgen.net/npm/v/eo-css-tools?icon=npm&color=blue)](https://www.npmjs.com/package/eo-css-tools)
 
-## Utils
+## Tools
 
-- [breakpoint](#breakpoint)
+- [Breakpoints](#Breakpoints)
 
 ## Install
 
