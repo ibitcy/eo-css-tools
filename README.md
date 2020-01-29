@@ -57,7 +57,7 @@ const style = {
   root: css`
     height: 200px;
 
-    // Mobile portrait breakpoint
+    // Mobile portrait custom
     ${breakpoint([undefined, 400])} {
       height: 400px;
     }
@@ -67,7 +67,7 @@ const style = {
       height: 600px;
     }
     
-    // Large screens
+    // Mobile portrait predefined
     ${mobile()} {
       height: 800px;
     }
