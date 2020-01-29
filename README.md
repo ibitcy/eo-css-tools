@@ -37,11 +37,11 @@ Generates media query with min/max-width conditions.
 | Method name               | Breakpoint type                         | Media query   |
 |---------------------------|-----------------------------------------|---------------|
 | `breakpoint([min, max])`  | Custom                                  |               |
-| `mobile()`                | Mobile devices in portrait orientation  | 0–479px       |
-| `mobileLandscape()`       | Mobile devices in landscape orientation | 0–767px       |
-| `tablet()`                | Tablet devices in portrait orientation  | 0–991px       |
-| `tabletLandscape()`       | Tablet devices in landscape orientation | 0–1199px      |
-| `desktop()`               | Laptops and larger                      | 1200–Infinity |
+| `mobile()`                | Mobile devices in portrait orientation  | < 479px       |
+| `mobileLandscape()`       | Mobile devices in landscape orientation | < 767px       |
+| `tablet()`                | Tablet devices in portrait orientation  | < 991px       |
+| `tabletLandscape()`       | Tablet devices in landscape orientation | < 1199px      |
+| `desktop()`               | Laptops and larger                      | 1200px >      |
 
 
 #### Example
