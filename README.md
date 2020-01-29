@@ -30,13 +30,13 @@ yarn add css-tools
 
 # Usage
 
-## breakpoint
+## `breakpoint` or `brp` (alias)
 
 ### Example
 
 ```typescript
 import { css } from 'YOUR_BELOWED_CSS_IN_JS_FRAMEWORK';
-import { breakpoint } from 'eo-css-tools';
+import { breakpoint, brp } from 'eo-css-tools';
 
 const LARGE_TO_INFINITY = [2000, Infinity];
 
@@ -45,19 +45,19 @@ const style = {
     height: 400px;
 
     // Mobile portrait breakpoint
-    ${breakpoint([0, 400]).css`
+    ${breakpoint([0, 400])} {
       height: 200px;
-    `}
+    }
 
     // Tablet breakpoint
-    ${breakpoint({ min: '401px', max: '1024px' }).css`
+    ${brp({ min: '401px', max: '1024px' })} {
       height: 300px;
-    `}
+    }
 
     // Large screens
-    ${breakpoint(LARGE_TO_INFINITY).css`
+    ${brp(LARGE_TO_INFINITY)} {
       height: 600px;
-    `}
+    }
   `,
 };
 ```
