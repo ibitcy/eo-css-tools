@@ -34,22 +34,21 @@ yarn add css-tools
 
 Generates media query with min/max-width conditions.
 
-| Method name            | Breakpoint type                         | Media query   |
-|------------------------|-----------------------------------------|---------------|
-| `breakpoint([min, max])` | Custom                                  |               |
-| `brp([min, max])`        | Alias of breakpoint (just shorthand)    |               |
-| `mobile()`               | Mobile devices in portrait orientation  | 0–479px       |
-| `mobileLandscape()`      | Mobile devices in landscape orientation | 0–767px       |
-| `tablet()`             | Tablet devices in portrait orientation  | 0–991px       |
-| `tabletLandscape()`    | Tablet devices in landscape orientation | 0–1199px      |
-| `desktop()`        | Laptops and larger                      | 1200–Infinity |
+| Method name               | Breakpoint type                         | Media query   |
+|---------------------------|-----------------------------------------|---------------|
+| `breakpoint([min, max])`  | Custom                                  |               |
+| `mobile()`                | Mobile devices in portrait orientation  | 0–479px       |
+| `mobileLandscape()`       | Mobile devices in landscape orientation | 0–767px       |
+| `tablet()`                | Tablet devices in portrait orientation  | 0–991px       |
+| `tabletLandscape()`       | Tablet devices in landscape orientation | 0–1199px      |
+| `desktop()`               | Laptops and larger                      | 1200–Infinity |
 
 
 ### Example
 
 ```typescript
 import { css } from 'YOUR_BELOWED_CSS_IN_JS_FRAMEWORK';
-import { breakpoint, brp, mobile } from 'eo-css-tools';
+import { breakpoint, brk, mobile } from 'eo-css-tools';
 
 const LARGE_TO_INFINITY = ['2000px', Infinity];
 
@@ -63,7 +62,7 @@ const style = {
     }
 
     // Large screens
-    ${brp(LARGE_TO_INFINITY)} {
+    ${brk(LARGE_TO_INFINITY)} {
       height: 600px;
     }
     

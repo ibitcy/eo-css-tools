@@ -29,4 +29,5 @@ export function breakpoint(params: TBreakpointValue[]): string {
 }
 
 // Aliases
-export const brp = breakpoint;
+export const brk = breakpoint;
+

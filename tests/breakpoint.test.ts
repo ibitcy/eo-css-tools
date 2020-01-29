@@ -1,5 +1,5 @@
 import expect from 'expect';
-import {breakpoint, brp} from '../src';
+import {breakpoint, brk} from '../src';
 
 const MOBILE_INT = [0, 400];
 const MOBILE_FLT = [0.1, 400.25];
@@ -7,8 +7,8 @@ const MOBILE_STR = ['0', '400px'];
 const MOBILE_FLT_STR = ['0.1px', '400.25px'];
 
 describe('breakpoint', () => {
-  it('check brp alias', done => {
-    expect(`${brp([MOBILE_INT[0]])} { background-color: red; }`).toEqual(
+  it('check alias', done => {
+    expect(`${brk([MOBILE_INT[0]])} { background-color: red; }`).toEqual(
       `@media only screen and (min-width: ${MOBILE_STR[0]}) { background-color: red; }`,
     );
     done();
