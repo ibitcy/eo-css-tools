@@ -57,17 +57,17 @@ const style = {
   root: css`
     height: 200px;
 
-    // Mobile portrait custom
+    /* Mobile portrait custom */
     ${breakpoint([undefined, 400])} {
       height: 400px;
     }
 
-    // Large screens
+    /* Large screens */
     ${brp(LARGE_TO_INFINITY)} {
       height: 600px;
     }
     
-    // Mobile portrait predefined
+    /* Mobile portrait predefined */
     ${mobile()} {
       height: 800px;
     }
