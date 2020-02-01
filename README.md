@@ -14,10 +14,10 @@
 
 ```bash
 # npm
-npm i css-tools
+npm i eo-css-tools
 
 # yarn
-yarn add css-tools
+yarn add eo-css-tools
 ```
 
 ## Compatibility
